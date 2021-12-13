@@ -1,0 +1,19 @@
+@import '../sass/animation';
+@import '../sass/mixins';
+@import '../sass/colors';
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+    font-family: 'Roboto Mono', monospace;
+}
+
+@import '../sass/medium';
+@import '../sass/large';
+@import '../sass/small';
