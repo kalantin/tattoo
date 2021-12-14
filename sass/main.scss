@@ -13,16 +13,51 @@ html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
 }
-body{
-    font-family: 'Roboto Mono', monospace;
+body {
+	font-family: 'Roboto Mono', monospace;
 	background-color: $back;
 }
 
-h1{
-	font-size: 2.6rem;
-	color: $heading;
+//Nawigacja / nav
+
+.nav {
+	display: none;
+}
+.hamburger {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	&-inner,
+	&-inner::before,
+	&-inner::after {
+		background-color: $textlight;
+	}
+}
+.nav {
+	&-mobile {
+		position: absolute;
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background-color: $backlight;
+		transform: translateX(-102%);
+		transition: transform 0.3s;
+		&--active {
+			transform: translateX(0);
+		}
+	}
+	&__link {
+		color: $heading;
+		font-size: 5rem;
+		text-decoration: none;
+		margin-bottom: 20px;
+	}
 }
 
+@import '../sass/small';
 @import '../sass/medium';
 @import '../sass/large';
-@import '../sass/small';
