@@ -94,7 +94,7 @@ body {
 }
 
 .hero {
-  position: absolute;
+  position: relative;
   width: 100vw;
   height: 100vh;
   background-image: url(../img/back-2-small.jpg);
@@ -170,6 +170,31 @@ body {
 }
 
 @media (min-width: 992px) {
+  .header {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: auto (1fr)[2];
+        grid-template-rows: auto repeat(2, 1fr);
+  }
+  .header .nav-desktop {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    width: 100%;
+  }
+  .header .hero {
+    grid-column: 2/-1;
+    grid-row: 1/-1;
+    background-image: url(/img/back-2-large.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+  }
   .nav-mobile {
     display: none;
   }
@@ -177,25 +202,21 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
-    width: 550px;
-    margin-top: 6em;
+    margin-top: 2em;
     border-bottom: 1px solid #EDEDED;
   }
   .nav__link {
     color: #EDEDED;
-    font-size: 2rem;
-    margin: .5em 1em;
+    font-size: 3rem;
+    margin: 0.5em 1em;
     -ms-flex-negative: 0;
         flex-shrink: 0;
   }
   .nav__link-img {
-    width: 6em;
+    width: 9em;
     margin-left: 1em;
   }
   .hamburger {
