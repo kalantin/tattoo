@@ -66,8 +66,8 @@ body {
 
 .nav__link {
   position: relative;
-  color: #fca311;
-  font-size: 5rem;
+  color: #EDEDED;
+  font-size: 4rem;
   text-decoration: none;
   margin-bottom: 20px;
 }
@@ -137,6 +137,36 @@ body {
   padding: 1em 3em;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+.hero__icon {
+  position: absolute;
+  width: 40px;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 50%;
+  -webkit-animation: pulse 1s infinite alternate;
+          animation: pulse 1s infinite alternate;
+}
+
+@-webkit-keyframes pulse {
+  from {
+    border: 1px solid transparent;
+  }
+  to {
+    border: 1px solid #fca311;
+  }
+}
+
+@keyframes pulse {
+  from {
+    border: 1px solid transparent;
+  }
+  to {
+    border: 1px solid #fca311;
+  }
 }
 
 @media (min-width: 992px) {

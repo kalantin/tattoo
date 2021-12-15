@@ -1,0 +1,9 @@
+
+@keyframes pulse{
+    from{
+        border: 1px solid transparent;
+    }
+    to{
+        border: 1px solid $heading;
+    }
+}
