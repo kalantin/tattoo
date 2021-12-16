@@ -1,5 +1,22 @@
-.btn-animation:hover{
-    background-color: $text;
-    color: $back;
-    border: 2px solid $back;
+.btn-animation:hover {
+	background-color: $text;
+	color: $back;
+	border: 2px solid $back;
+}
+.wrapper {
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+}
+.heading {
+	text-align: center;
+    width: 100%;
+    color: $text;
+    padding: 1.5em 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 3em;
+    span{
+        color:$shadow;
+    }
 }
