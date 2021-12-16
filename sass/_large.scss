@@ -42,9 +42,20 @@
 			font-size: 2rem;
 			margin: 0.5em 1em;
 			flex-shrink: 0;
+			&--left{
+				transform: translateX(200%);
+				opacity: 0;
+				animation: menuLeft 2s .6s 1 both;
+			}
+			&--right{
+				transform: translateX(200%);
+				opacity: 0;
+				animation: menuRight 2s 1s 1 both;
+			}
 			&-img {
 				width:9em;
 				margin-left: 1em;
+				animation: menu 2s .4s 1 both;
 			}
 		}
 		

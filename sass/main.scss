@@ -97,6 +97,7 @@ body {
 		bottom: 30%;
 		left: 50%;
 		transform: translateX(-50%);
+		animation: show 2s .4s 1 both;
 		&--desktop{
 			display: none;
 		}
@@ -117,6 +118,7 @@ body {
 		letter-spacing: 1px;
 		padding: 1em 2em;
 		transform: translateX(-50%);
+		animation: show 1.5s 1s 1 both;
 	}
 	&__icon {
 		position: absolute;
