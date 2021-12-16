@@ -1,19 +1,15 @@
 @media (min-width: 992px) {
-
 	.header {
-		.nav-desktop {
-			width: 100%;
-		}
 		.hero {
 			@include heroImages('../img/girl-large.jpg');
 			width: 100%;
-			&__btn{
+			&__btn {
 				padding: 1em 2em;
 				bottom: 20%;
 			}
-			&__logo{
+			&__logo {
 				display: none;
-				&--desktop{
+				&--desktop {
 					position: absolute;
 					display: block;
 					left: 50%;
@@ -24,41 +20,49 @@
 				}
 			}
 		}
-	}
-	.nav {
-		&-mobile {
-			display: none;
-		}
-		&-desktop {
-			position: absolute;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			margin-top: 2em;
-			background-color: transparent;
-		}
-		&__link {
-			color: $text;
-			font-size: 2rem;
-			margin: 0.5em 1em;
-			flex-shrink: 0;
-			&--left{
-				transform: translateX(200%);
-				opacity: 0;
-				animation: menuLeft 2s .6s 1 both;
+		.nav {
+			&-mobile {
+				display: none;
 			}
-			&--right{
-				transform: translateX(200%);
-				opacity: 0;
-				animation: menuRight 2s 1s 1 both;
+			&-desktop {
+				position: absolute;
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-top: 2em;
+	
+				background-color: transparent;
 			}
-			&-img {
-				width:9em;
-				margin-left: 1em;
-				animation: menu 2s .4s 1 both;
+			&__link {
+				color: $text;
+				font-size: 2rem;
+				margin: 0.5em 1em;
+				flex-shrink: 0;
+				&--left {
+					transform: translateX(200%);
+					opacity: 0;
+					animation: menuLeft 2s 0.6s 1 both;
+				}
+				&--right {
+					transform: translateX(200%);
+					opacity: 0;
+					animation: menuRight 2s 1s 1 both;
+				}
+				&-img {
+					position: relative;
+					width: 9em;
+					margin-left: 1em;
+					animation: menu 2s 0.4s 1 both;
+					border-radius: 50%;
+					border: 1px solid transparent;
+					transition: border .3s;
+					&:hover {
+						border: 1px solid $textlight;
+					}
+				}
 			}
 		}
-		
 	}
 	.hamburger {
 		display: none;

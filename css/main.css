@@ -1,3 +1,9 @@
+.btn-animation:hover {
+  background-color: #EDEDED;
+  color: #171717;
+  border: 2px solid #171717;
+}
+
 *,
 *::after,
 *::before {
@@ -17,11 +23,6 @@ body {
   background-color: #171717;
 }
 
-.nav {
-  display: none;
-  z-index: 100;
-}
-
 .hamburger {
   position: absolute;
   left: 0;
@@ -31,6 +32,14 @@ body {
 
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
   background-color: #ffffff;
+}
+
+.nav {
+  z-index: 100;
+}
+
+.nav-desktop {
+  display: none;
 }
 
 .nav-mobile {
@@ -50,7 +59,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #444444;
+  background-color: #171717;
   -webkit-transform: translateX(-102%);
           transform: translateX(-102%);
   -webkit-transition: -webkit-transform 0.3s;
@@ -80,7 +89,7 @@ body {
   left: 0;
   height: 2px;
   width: 100%;
-  background-color: #fca311;
+  background-color: #EDEDED;
   -webkit-transform: scale(0);
           transform: scale(0);
   -webkit-transition: -webkit-transform 0.3s;
@@ -117,7 +126,6 @@ body {
 .hero__logo {
   position: absolute;
   width: 60%;
-  min-width: 270px;
   bottom: 30%;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -146,6 +154,8 @@ body {
   padding: 1em 2em;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  -webkit-transition: .4s;
+  transition: .4s;
   -webkit-animation: show 1.5s 1s 1 both;
           animation: show 1.5s 1s 1 both;
 }
@@ -160,6 +170,7 @@ body {
   border-radius: 50%;
   -webkit-animation: pulse 1s infinite alternate;
           animation: pulse 1s infinite alternate;
+  cursor: pointer;
 }
 
 @-webkit-keyframes pulse {
@@ -290,7 +301,7 @@ body {
 
 @media (min-width: 576px) {
   .hero__logo {
-    max-width: 270px;
+    width: 40%;
   }
 }
 
@@ -304,31 +315,7 @@ body {
   }
 }
 
-@media (min-width: 811px) {
-  .hero__btn {
-    font-size: 1.3em;
-    padding: 1em 2em;
-  }
-  .hero__logo {
-    display: none;
-  }
-  .hero__logo--desktop {
-    position: absolute;
-    display: block;
-    left: 50%;
-    bottom: 40%;
-    width: 40%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-    -webkit-animation: show 1.5s 0.4s 1 both;
-            animation: show 1.5s 0.4s 1 both;
-  }
-}
-
 @media (min-width: 992px) {
-  .header .nav-desktop {
-    width: 100%;
-  }
   .header .hero {
     background-image: url("../img/girl-large.jpg");
     background-attachment: fixed;
@@ -353,11 +340,12 @@ body {
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
   }
-  .nav-mobile {
+  .header .nav-mobile {
     display: none;
   }
-  .nav-desktop {
+  .header .nav-desktop {
     position: absolute;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -370,32 +358,40 @@ body {
     margin-top: 2em;
     background-color: transparent;
   }
-  .nav__link {
+  .header .nav__link {
     color: #EDEDED;
     font-size: 2rem;
     margin: 0.5em 1em;
     -ms-flex-negative: 0;
         flex-shrink: 0;
   }
-  .nav__link--left {
+  .header .nav__link--left {
     -webkit-transform: translateX(200%);
             transform: translateX(200%);
     opacity: 0;
-    -webkit-animation: menuLeft 2s .6s 1 both;
-            animation: menuLeft 2s .6s 1 both;
+    -webkit-animation: menuLeft 2s 0.6s 1 both;
+            animation: menuLeft 2s 0.6s 1 both;
   }
-  .nav__link--right {
+  .header .nav__link--right {
     -webkit-transform: translateX(200%);
             transform: translateX(200%);
     opacity: 0;
     -webkit-animation: menuRight 2s 1s 1 both;
             animation: menuRight 2s 1s 1 both;
   }
-  .nav__link-img {
+  .header .nav__link-img {
+    position: relative;
     width: 9em;
     margin-left: 1em;
-    -webkit-animation: menu 2s .4s 1 both;
-            animation: menu 2s .4s 1 both;
+    -webkit-animation: menu 2s 0.4s 1 both;
+            animation: menu 2s 0.4s 1 both;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    -webkit-transition: border .3s;
+    transition: border .3s;
+  }
+  .header .nav__link-img:hover {
+    border: 1px solid #ffffff;
   }
   .hamburger {
     display: none;

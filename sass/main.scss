@@ -1,5 +1,6 @@
 @import '../sass/mixins';
 @import '../sass/colors';
+@import '../sass/components';
 
 *,
 *::after,
@@ -20,10 +21,7 @@ body {
 //HEADER
 
 //Nawigacja / nav
-.nav {
-	display: none;
-	z-index: 100;
-}
+
 .hamburger {
 	position: absolute;
 	left: 0;
@@ -36,13 +34,17 @@ body {
 	}
 }
 .nav {
+	z-index: 100;
+	&-desktop{
+		display: none;
+	}
 	&-mobile {
 		position: absolute;
 		width: 100vw;
 		height: 100vh;
 		@include flex;
 		flex-direction: column;
-		background-color: $backlight;
+		background-color: $back;
 		transform: translateX(-102%);
 		transition: transform 0.3s;
 		&--active {
@@ -63,7 +65,7 @@ body {
 			left: 0;
 			height: 2px;
 			width: 100%;
-			background-color: $heading;
+			background-color: $text;
 			transform: scale(0);
 			transition: transform 0.3s;
 		}
@@ -93,7 +95,7 @@ body {
 	&__logo {
 		position: absolute;
 		width: 60%;
-		min-width: 270px;
+		// min-width: 270px;
 		bottom: 30%;
 		left: 50%;
 		transform: translateX(-50%);
@@ -118,6 +120,7 @@ body {
 		letter-spacing: 1px;
 		padding: 1em 2em;
 		transform: translateX(-50%);
+		transition: .4s;
 		animation: show 1.5s 1s 1 both;
 	}
 	&__icon {
@@ -128,6 +131,7 @@ body {
 		transform: translateX(-50%);
 		border-radius: 50%;
 		animation: pulse 1s infinite alternate;
+		cursor: pointer;
 	}
 }
 @import '../sass/animation';
