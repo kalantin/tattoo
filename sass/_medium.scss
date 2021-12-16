@@ -1,3 +1,11 @@
 @media (min-width: 768px) {
-	
+	.hero{
+        &__btn{
+            bottom: 20%;
+        }
+        &__logo{
+            width: 30%;
+            bottom: 27%;
+        }
+    }
 }

@@ -1,3 +1,7 @@
-@media (min-width: 576px){
-    
+@media (min-width: 576px) {
+	.hero {
+		&__logo {
+			max-width: 270px;
+		}
+	}
 }

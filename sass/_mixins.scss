@@ -1,0 +1,12 @@
+@mixin flex {
+    display: flex;
+    justify-content: center;
+		align-items: center;
+}
+
+@mixin heroImages($bgImg) {
+	background-image:  url($bgImg);
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+}
