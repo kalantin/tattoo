@@ -9,3 +9,25 @@
         }
     }
 }
+
+
+@media (min-width: 811px){
+    .hero{
+        &__btn{
+            font-size: 1.3em;
+            padding: 1em 2em;
+        }
+        &__logo{
+            display: none;
+            &--desktop{
+                position: absolute;
+					display: block;
+					left: 50%;
+					bottom: 40%;
+					width: 40%;
+					transform: translateX(-50%);
+            }
+        }
+
+    }
+}
