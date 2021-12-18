@@ -91,6 +91,7 @@ body {
 		left: 50%;
 		transform: translateX(-50%);
 		animation: show 2s 0.4s 1 both;
+		z-index: 1;
 		&--desktop {
 			display: none;
 		}
@@ -127,7 +128,7 @@ body {
 	}
 }
 
-//About us/O nas
+// About us/O nas
 
 .aboutus {
 	overflow: hidden;
@@ -135,122 +136,97 @@ body {
 	@include heroImages('../img/mask-large.jpg');
 	&__boxes {
 		display: flex;
+		flex-direction: column;
 		justify-content: space-around;
 		align-items: center;
 		margin-bottom: 40px;
 	}
 	&__box {
-		position: relative;
-		width: 350px;
-		height: 100%;
-		border-radius: 20px;
+		@include flex;
+		flex-direction: column;
+		width: 90%;
+		margin-bottom: 20px;
 		transition: 0.3s;
-		&--left {
-			&:hover {
-				box-shadow: 0px 0px 12px -1px rgba(255, 255, 255, 1);
-				margin-right: 300px;
-			}
-			&:hover > .aboutus__text {
-				box-shadow: 0px 0px 12px -1px rgba(255, 255, 255, 1);
-				transform: translateX(100%) translateY(-50%);
-			}
-		}
-		&--right {
-			&:hover {
-				box-shadow: 0px 0px 12px -1px rgba(255, 255, 255, 1);
-				margin-left: 300px;
-				&:hover > .aboutus__text--right {
-					box-shadow: 0px 0px 12px -1px rgba(255, 255, 255, 1);
-					transform: translateX(-100%) translateY(-50%);
-				}
-			}
-		}
 	}
 	&__img {
-		position: relative;
-		transition: 0.3s;
-		z-index: 1;
-		border-top-left-radius: 20px;
-		border-bottom-left-radius: 20px;
-		border-bottom-right-radius: 20px;
-		border-top-right-radius: 20px;
-		width: 350px;
-		height: 600px;
-		object-fit: cover;
+		width: 100%;
+		&-pic {
+			position: relative;
+			border-top-left-radius: 20px;
+			border-top-right-radius: 20px;
+			width: 100%;
+			object-fit: cover;
+		}
 	}
 	&__text {
-		position: absolute;
-		width: 350px;
-		left: 0;
-		top: 50%;
+		position: relative;
+		width: 100%;
 		@include flex;
 		flex-direction: column;
 		background-color: $text;
-		border-top-right-radius: 20px;
+		border-bottom-left-radius: 20px;
 		border-bottom-right-radius: 20px;
-		transform: translateY(-50%);
 		transition: 0.3s;
-		padding: 1em 3em;
-		p {
-			font-size: 1.6em;
-			color: $back;
-			margin: 40px 0;
-			text-align: justify;
-		}
+		padding: 0 2em;
+		// p {
+		// 	font-size: 1.3em;
+		// 	color: $back;
+		// 	margin-bottom: 20px;
+		// 	text-align: justify;
+		// }
 		&--right {
-			border-top-left-radius: 20px;
 			border-bottom-left-radius: 20px;
-			border-top-right-radius: 0;
-			border-bottom-right-radius: 0;
+			border-bottom-right-radius: 20px;
+		}
+	}
+	&__paragraf {
+		font-size: 1.3em;
+		color: $back;
+		margin-bottom: 20px;
+		text-align: justify;
+		padding: 0 2em;
+		&-info {
+			color: $text;
 		}
 	}
 	&__icon {
 		margin-right: 10px;
 		margin-bottom: 20px;
 		cursor: pointer;
-		&-information{
+		&-information {
 			width: 30px;
 			margin-right: 1em;
 		}
 	}
 	&__information {
-		position: relative;
 		@include flex;
-			margin: 0 auto;
+		flex-direction: column;
+		margin: 0 auto;
 		background-color: rgba(0, 0, 0, 0.7);
-		overflow: hidden;
 		color: $text;
 		border-radius: 15px;
-		width: 80%;
-		height: 500px;	
-		h3{
+		overflow: hidden;
+		margin-bottom: 20px;
+		width: 90%;
+		h3 {
 			margin-bottom: 1em;
+			font-size: 2.5em;
 		}
-		p {
-			font-size: 2em;
-			text-align: justify;
-			padding: 1em 2em;
-		}
-		
-		&-img{
-			width: 40%;
-			height: 100%;
-			img{
+		&-img {
+			width: 100%;
+			img {
 				width: 100%;
-				height: 100%;
-				object-fit: cover;
 			}
 		}
-		&-text{
-			width: 60%;
-			height: 100%;
+		&-text {
+			width: 100%;
 			@include flex;
 			flex-direction: column;
 			justify-content: space-around;
 		}
 	}
-	&__media{
-		&-information{
+	&__media {
+		&-information {
 			margin: 2em 0;
 		}
 	}
