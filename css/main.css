@@ -5,6 +5,7 @@
 }
 
 .wrapper {
+  position: relative;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -265,6 +266,8 @@ body {
 
 .aboutus__img {
   width: 100%;
+  height: 300px;
+  overflow: hidden;
 }
 
 .aboutus__img-pic {
@@ -358,10 +361,14 @@ body {
 
 .aboutus__information-img {
   width: 100%;
+  height: 5	00px;
+  overflow: hidden;
 }
 
 .aboutus__information-img img {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .aboutus__information-text {
@@ -519,13 +526,55 @@ body {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 767px) {
   .hero__btn {
     bottom: 20%;
   }
   .hero__logo {
     width: 30%;
     bottom: 27%;
+  }
+  .inside-heading {
+    font-size: 3em;
+  }
+  .aboutus__information h3 {
+    font-size: 4em;
+  }
+  .aboutus__information-img {
+    height: 400px;
+  }
+  .aboutus__information-img img {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .aboutus__paragraf {
+    font-size: 1.5em;
+  }
+  .aboutus__icon {
+    width: 40px;
+  }
+  .aboutus__boxes {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .aboutus__img {
+    width: 100%;
+    height: 400px;
+  }
+  .aboutus__img-pic {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .aboutus__box {
+    width: 47%;
+    height: 100%;
   }
 }
 
@@ -623,6 +672,9 @@ body {
   .hamburger {
     display: none;
   }
+  .inside-heading {
+    font-size: 3em;
+  }
   .aboutus {
     overflow: hidden;
     padding-bottom: 20px;
@@ -641,6 +693,7 @@ body {
     background-color: rgba(0, 0, 0, 0.6);
   }
   .aboutus__boxes {
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -654,8 +707,6 @@ body {
         -ms-flex-align: center;
             align-items: center;
     width: 100%;
-    margin: 0 auto;
-    margin-top: 40px;
   }
   .aboutus__box {
     position: relative;
@@ -707,6 +758,7 @@ body {
   .aboutus__text {
     position: absolute;
     height: 500px;
+    width: 99%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -743,6 +795,7 @@ body {
   .aboutus__icon {
     margin-right: 10px;
     margin-bottom: 20px;
+    width: 30px;
     cursor: pointer;
   }
   .aboutus__icon-information {
@@ -750,7 +803,6 @@ body {
     margin-right: 1em;
   }
   .aboutus__information {
-    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -764,30 +816,26 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    margin: 0 auto;
     background-color: rgba(0, 0, 0, 0.7);
     overflow: hidden;
     color: #EDEDED;
     border-radius: 15px;
-    width: 70%;
-    height: 500px;
+    width: 95%;
+    height: 400px;
   }
   .aboutus__information h3 {
-    margin-top: 1em;
+    font-size: 2em;
   }
   .aboutus__information-img {
-    width: 40%;
-    height: 100%;
+    width: 50%;
+    height: 400px;
   }
   .aboutus__information-img img {
-    width: 100%;
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
   }
   .aboutus__information-text {
-    width: 60%;
-    height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -801,10 +849,48 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    justify-content: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   .aboutus__media-information {
-    margin: 2em 0;
+    margin: 0;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 567px) {
+  .aboutus__text {
+    width: 98%;
+    height: 95%;
+  }
+  .hero__logo {
+    width: 20%;
+    bottom: 30%;
+  }
+  .hero__btn {
+    width: 20%;
+    font-size: 1em;
+  }
+  .hero__icon {
+    width: 30px;
+    bottom: 10px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1023px) {
+  .hero__icon {
+    width: 40px;
+    bottom: 40px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1365px) {
+  .hero__btn {
+    width: 15%;
+    font-size: 1.3em;
+  }
+  .hero__icon {
+    width: 40px;
+    bottom: 40px;
   }
 }
 /*# sourceMappingURL=main.css.map */

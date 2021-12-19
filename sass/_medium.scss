@@ -1,4 +1,4 @@
-@media (min-width: 768px) {
+@media (min-width: 767px) {
 	.hero {
 		&__btn {
 			bottom: 20%;
@@ -8,5 +8,45 @@
 			bottom: 27%;
 		}
 	}
+	.inside-heading {
+		font-size: 3em;
+	}
+	.aboutus {
+		&__information {
+			h3 {
+				font-size: 4em;
+			}
+			&-img{
+				height: 400px;
+				img{
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+		}
+		&__paragraf {
+			font-size: 1.5em;
+		}
+		&__icon {
+			width: 40px;
+		}
+		&__boxes {
+			flex-direction: row;
+			align-items: center;
+		}
+		&__img{
+			width: 100%;height: 400px;
+			&-pic{
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		&__box {
+			width: 47%;
+			height: 100%;
+			// &--right{
+			// 	width: 100%;
+			// }
+		}
+	}
 }
-
