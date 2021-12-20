@@ -131,9 +131,10 @@ body {
 // About us/O nas
 
 .aboutus {
-	overflow: hidden;
+	position: relative;
+	// overflow: hidden;
 	padding-bottom: 20px;
-	@include heroImages('../img/mask-large.jpg');
+	@include heroImages('../img/mask-small.jpg');
 	&__boxes {
 		display: flex;
 		flex-direction: column;
@@ -231,6 +232,10 @@ body {
 	}
 }
 
+.before{
+	@include heroImages('../img/hand-1-large.jpg');
+	position: relative;
+}
 @import '../sass/animation';
 @import '../sass/small';
 @import '../sass/medium';

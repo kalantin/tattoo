@@ -153,7 +153,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .hero__logo {
@@ -210,9 +210,9 @@ body {
 }
 
 .aboutus {
-  overflow: hidden;
+  position: relative;
   padding-bottom: 20px;
-  background-image: url("../img/mask-large.jpg");
+  background-image: url("../img/mask-small.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -225,7 +225,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .aboutus__boxes {
@@ -392,6 +392,24 @@ body {
 
 .aboutus__media-information {
   margin: 2em 0;
+}
+
+.before {
+  background-image: url("../img/hand-1-large.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.before::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 @-webkit-keyframes pulse {
@@ -594,7 +612,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.3);
   }
   .header .hero__btn {
     padding: 1em 2em;
@@ -678,7 +696,7 @@ body {
   .aboutus {
     overflow: hidden;
     padding-bottom: 20px;
-    background-image: url("../img/mask-large.jpg");
+    background-image: url("../img/hand-3-large.jpg");
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -690,7 +708,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.3);
   }
   .aboutus__boxes {
     position: relative;
@@ -854,6 +872,98 @@ body {
   }
   .aboutus__media-information {
     margin: 0;
+  }
+  .before {
+    padding-bottom: 4em;
+  }
+  .before__boxes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .before__box {
+    -webkit-box-shadow: 30px 22px 24px -7px black;
+            box-shadow: 30px 22px 24px -7px black;
+    border-radius: 15px;
+    background-color: #EDEDED;
+    margin-bottom: 20px;
+    height: 80px;
+    width: 80%;
+    overflow: hidden;
+  }
+  .before__box-img {
+    margin-left: 20px;
+    width: 50px;
+  }
+  .before__box-img img {
+    width: 100%;
+  }
+  .before__box-img--up, .before__box-img--down {
+    position: absolute;
+    margin-right: 20px;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translatey(-50%);
+            transform: translatey(-50%);
+  }
+  .before__box-img--down {
+    display: none;
+  }
+  .before__box-img--down-show {
+    display: block;
+  }
+  .before__box-img--up-hide {
+    display: none;
+  }
+  .before__box-head {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 80px;
+    cursor: pointer;
+  }
+  .before__box-heading {
+    color: #fca311;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .before__box-text {
+    font-size: 1.6em;
+    padding: 3em 5em;
+    text-align: justify;
+  }
+  .before__box-paragraf {
+    margin-bottom: 10px;
+  }
+  .before__box-show {
+    height: 100%;
+  }
+  .before__list {
+    margin: 1em 0;
+  }
+  .before__list-element {
+    margin: 20px 20px;
   }
 }
 

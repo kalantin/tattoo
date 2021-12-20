@@ -70,13 +70,13 @@
 	.hamburger {
 		display: none;
 	}
-	.inside-heading{
+	.inside-heading {
 		font-size: 3em;
 	}
 	.aboutus {
 		overflow: hidden;
 		padding-bottom: 20px;
-		@include heroImages('../img/mask-large.jpg');
+		@include heroImages('../img/hand-3-large.jpg');
 		&__boxes {
 			position: relative;
 			display: flex;
@@ -145,10 +145,10 @@
 				border-bottom-right-radius: 0;
 			}
 		}
-		&__paragraf{
+		&__paragraf {
 			font-size: 1.6em;
 			padding: 0 1em;
-			&-info{
+			&-info {
 				padding: 0 1.5em;
 			}
 		}
@@ -171,13 +171,13 @@
 			border-radius: 15px;
 			width: 95%;
 			height: 400px;
-			h3{
+			h3 {
 				font-size: 2em;
 			}
 			&-img {
 				width: 50%;
 				height: 400px;
-				img{
+				img {
 					height: 100%;
 					object-fit: cover;
 				}
@@ -190,7 +190,80 @@
 		}
 		&__media {
 			&-information {
-				margin:0;
+				margin: 0;
+			}
+		}
+	}
+	.before {
+		padding-bottom: 4em;
+		&__boxes {
+			@include flex;
+			flex-direction: column;
+		}
+		&__box {
+			box-shadow: 30px 22px 24px -7px rgba(0, 0, 0, 1);
+			border-radius: 15px;
+			background-color: $text;
+			margin-bottom: 20px;
+			height: 80px;
+			width: 80%;
+			overflow: hidden;
+			&-img {
+				margin-left: 20px;
+				width: 50px;
+				img {
+					width: 100%;
+				}
+				&--up,
+				&--down {
+					position: absolute;
+					margin-right: 20px;
+					right: 0;
+					top: 50%;
+					transform: translatey(-50%);
+				}
+				&--down {
+					display: none;
+					&-show {
+						display: block;
+					}
+				}
+				&--up {
+					&-hide {
+						display: none;
+					}
+				}
+			}
+			&-head {
+				position: relative;
+				@include flex;
+				justify-content: space-between;
+				height: 80px;
+				cursor: pointer;
+			}
+			&-heading {
+				color: $heading;
+				font-size: 2.5em;
+				letter-spacing: 2px;
+				text-transform: uppercase;
+			}
+			&-text {
+				font-size: 1.6em;
+				padding: 3em 5em;
+				text-align: justify;
+			}
+			&-paragraf{
+				margin-bottom: 10px;
+			}
+			&-show {
+				height: 100%;
+			}
+		}
+		&__list {
+			margin: 1em 0;
+			&-element {
+				margin: 20px 20px;
+
 			}
 		}
 	}
