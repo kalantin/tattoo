@@ -9,15 +9,19 @@
 	margin: 0 auto;
 }
 .heading {
+	position: relative;
 	text-align: center;
 	width: 100%;
-	color: $text;
-	padding: 1.5em 0;
+	color: $back;
+	padding: .2em 0;
+	margin-bottom: 2em;
 	text-transform: uppercase;
+	background-color:$text;
 	letter-spacing: 2px;
 	font-size: 3em;
 	font-family: 'cinzel';
 	text-shadow: 3px 3px 2px rgba(150, 150, 150, 0.53);
+	z-index: 999;
 	span {
 		color: $shadow;
 	}

@@ -15,7 +15,7 @@ html {
 }
 body {
 	font-family: 'Roboto Mono', monospace;
-	background-color: $text;
+	background-color: $back;
 }
 
 //HEADER
@@ -132,7 +132,6 @@ body {
 
 .aboutus {
 	position: relative;
-	// overflow: hidden;
 	padding-bottom: 20px;
 	@include heroImages('../img/mask-small.jpg');
 	&__boxes {
