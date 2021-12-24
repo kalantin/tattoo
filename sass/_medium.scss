@@ -49,4 +49,23 @@
 			// }
 		}
 	}
+	.before{
+		&__box{
+			&-heading{
+				font-size: 2em;
+			}
+			&-text{
+				padding: 3em 5em;
+				font-size: 1.6em;
+			}
+			&-img{
+				width: 30px;
+			}
+		}
+	}
+	.contact{
+		&__form{
+			width: 70%;
+		}
+	}
 }
